@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:id="@+id/swipe"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/submit"
+                        android:layout_toStartOf="@id/middle"
+                        android:background="@drawable/simple_ripple"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:src="@drawable/submit_problem"
+                            android:layout_width="@dimen/img_width_height"
+                            android:layout_height="@dimen/img_width_height"
+                            android:background="#fff"
+                            android:layout_gravity="center"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Soumettre un problème"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:id="@+id/middle"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:background="#e3e3e3"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/middle"
+                        android:id="@+id/see_submissions"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:src="@drawable/visw_problem"
+                            android:layout_width="@dimen/img_width_height"
+                            android:layout_height="@dimen/img_width_height"
+                            android:background="#fff"
+                            android:layout_gravity="center"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Voir les problèmes"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/textmidlle"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Récents problèmes"
+                        android:id="@+id/textmidlle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/textmidlle"/>
+
+                </RelativeLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/fbshimmer">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/item_view_problem"/>
+                        <include layout="@layout/item_view_problem"/>
+                        <include layout="@layout/item_view_problem"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/recent_submissions"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/textmidlle9"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Problèmes de votre commune"
+                        android:id="@+id/textmidlle9"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/textmidlle9"/>
+
+                </RelativeLayout>
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/map"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/textmidlle2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Statistiques de l'année"
+                        android:id="@+id/textmidlle2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/textmidlle2"/>
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="match_parent"
+                    android:id="@+id/chart"
+                    android:layout_height="400dp"/>
+                
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/img_width_height"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        app:cardBackgroundColor="@color/bg_screen1"
+                        android:layout_height="@dimen/img_width_height">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="100"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:id="@+id/counter_all_submitted"
+                                android:textColor="@android:color/white"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Problèmes soumis"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/img_width_height"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        app:cardBackgroundColor="@color/bg_screen2"
+                        android:layout_height="@dimen/img_width_height">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="100"
+                                android:id="@+id/counter_all_solved"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@android:color/white"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Problèmes résolus"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

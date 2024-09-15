@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#09bc2f</color>
+    <color name="colorPrimaryDark">#08ae2b</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="rippleEffect">#fff1e1</color>
+    <color name="rippleEffectSmbre">#989694</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#20d2bb</color>
+    <color name="bg_screen2">#FAAA35</color>
+    <color name="bg_screen3">#f64c73</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#14a895</color>
+    <color name="dot_dark_screen2">#FF9800</color>
+    <color name="dot_dark_screen3">#d1395c</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#8cf9eb</color>
+    <color name="dot_light_screen2">#F4C47D</color>
+    <color name="dot_light_screen3">#F98DA5</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+
+</resources>

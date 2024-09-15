@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_signup.Signin"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/textmidlle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Connectez-vous sur GoLocal"
+                        android:id="@+id/textmidlle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/textmidlle"/>
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="wrap_content"
+                    app:prefixText="+229"
+                    app:prefixTextColor="@color/colorPrimary"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:inputType="phone"
+                        android:id="@+id/contact"
+                        android:hint="Contact"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:maxLength="100"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:id="@+id/password"
+                        android:inputType="textPassword"
+                        android:hint="Mot de passe"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Se connecter"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="monospace"
+                    android:id="@+id/validate"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    style="@style/TextAppearance.MaterialComponents.Button"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/textmidlle3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mot de passe oublié"
+                        android:id="@+id/textmidlle3"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/textmidlle3"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/textmidlle4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Je n'ai pas de compte GoLocal"
+                        android:id="@+id/textmidlle4"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e3e3e3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/textmidlle4"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

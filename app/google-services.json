@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "390094780904",
+    "project_id": "golocale-bf643",
+    "storage_bucket": "golocale-bf643.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390094780904:android:e0944e48fb7ce3e47b0c5d",
+        "android_client_info": {
+          "package_name": "geolocale.city.bj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390094780904-l8ee8d891dto8oq0demgk5qi9vu7rspr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "geolocale.city.bj",
+            "certificate_hash": "1330abfaccdf8795c80ddc98203cebb6876e61da"
+          }
+        },
+        {
+          "client_id": "390094780904-a20a4r3ipmc1jcnjnt2c2k70tl1rql4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXy9mBCh34fwbCEkcsQeUhO_qY-OKb1iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390094780904-a20a4r3ipmc1jcnjnt2c2k70tl1rql4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

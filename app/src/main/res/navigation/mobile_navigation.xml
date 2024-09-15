@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_accueil">
+
+    <fragment
+        android:id="@+id/nav_accueil"
+        android:name="geolocale.city.bj.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_accueil"/>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="geolocale.city.bj.ui.profil.ProfilFragment"
+        android:label="@string/menu_profil"
+        tools:layout="@layout/fragment_profil"/>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="geolocale.city.bj.ui.notification.NotificationFragment"
+        android:label="@string/menu_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="geolocale.city.bj.ui.historique.HistoriqueFragment"
+        android:label="@string/menu_historique"
+        tools:layout="@layout/fragment_historique" />
+
+
+</navigation>

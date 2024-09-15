@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    tools:context=".ui.profil.ProfilFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:tooltipText="Photo de couverture#b6c5d0"
+            android:background="@drawable/background_ripple_item"
+            android:id="@+id/couv_pic"
+            android:src="@drawable/logo"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/default_pic"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="1dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/profile_pic"
+            android:visibility="gone"
+            app:civ_circle_background_color="@android:color/white"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:text="MODIFIER LE PROFIL"
+            android:layout_below="@+id/couv_pic"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:layout_toEndOf="@+id/profile_pic"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/update"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/couv_pic"
+            android:id="@+id/infos"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e3e3e3"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/textmidlle3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informations générales"
+                android:id="@+id/textmidlle3"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e3e3e3"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/textmidlle3"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/description"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="  User name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:id="@+id/show_name"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    app:drawableLeftCompat="@drawable/ic_account_circle_black_24dp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Email:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/email"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Contact:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/contact" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Genre: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/sexe" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Tranche d'âge: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/age" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Commune: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/commune" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    app:fontFamily="sans-serif-thin"
+                    android:text="     Arrondissement: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    style="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/arrond" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/textmidlle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statistique sur GoLocal"
+                    android:id="@+id/textmidlle"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerInParent="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/textmidlle"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/img_width_height"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:cardBackgroundColor="@color/bg_screen1"
+                    android:layout_height="@dimen/img_width_height">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="100"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:id="@+id/counter_all_submitted"
+                            android:textColor="@android:color/white"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Problèmes soumis"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/img_width_height"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:cardBackgroundColor="@color/bg_screen2"
+                    android:layout_height="@dimen/img_width_height">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="100"
+                            android:id="@+id/counter_all_solved"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Problèmes résolus"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/textmidlle2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Préférences de notification"
+                    android:id="@+id/textmidlle2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerInParent="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e3e3e3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/textmidlle2"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recevoir toutes les notifications"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/allNotif"
+                        android:textSize="14sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/allNotif"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mode vibreur"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/vibreur"
+                        android:textSize="14sp"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/vibreur"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
